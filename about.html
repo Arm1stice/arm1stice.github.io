@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- CSS Stuffs -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<style>
+			.navbar-wrapper {
+				background-color: blue;
+			}
+		</style>
+		<title>Arm1stice</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Arm1stice</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class='active'><a href="about.html">About Me</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://github.com/marketchange/marketchange">MarketChange</a></li>
+                                <li><a href="http://github.com/Arm1stice/noderc">NodeRC</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+					<ul class="nav navbar-text navbar-right" id='time'></ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+		<div id='pageBody'>
+			<div class="jumbotron">
+				<h1>FAQs</h1>
+				<script src="http://blockr.io/js_external/coinwidget/coin.js"></script>
+			<script>
+				CoinWidgetCom.go({
+				wallet_address: '1ARM1SWz3G5WPRFy6u1N9pbLiD3jPKp37Y',
+				currency: 'bitcoin',
+				counter: 'amount',
+				lbl_button: 'Donate',
+				lbl_count: 'donations',
+				lbl_amount: 'BTC',
+				lbl_address: 'Use address below to donate. Thanks!',
+				qrcode: true,
+				alignment: 'bl',
+				decimals: 5,
+				size: "big",
+				color: "dark",
+				countdownFrom: "0",
+				element: "#coinwidget-bitcoin-1ARM1SWz3G5WPRFy6u1N9pbLiD3jPKp37Y",
+				onShow: function(){},
+				onHide: function(){}
+			});
+			</script>
+			<div id="coinwidget-bitcoin-1ARM1SWz3G5WPRFy6u1N9pbLiD3jPKp37Y"></div><br>
+				<h2>Who are you?</h2>
+				<p>I am a 14 year old NodeJS programmer and web developer.</p><br>
+				
+				<h2>How long have you been programming?</h2>
+				<p>I have been working with Javascript for about a year now.</p><br>
+				
+				<h2>Anything else you want to do other than Javascript?</h2>
+				<p>Well, I would love to get into iOS app development, as it has been something I
+				have wanted to do for a long time. I will begin this summer. Also, I would like to get
+				into the iOS hacking scene, as I think that searching for bugs and exploits is a lot of fun.</p><br>
+				
+				<h2>What do you do when you aren't writing code?</h2>
+				<p>Well, in my free time I enjoy playing DotA 2. I just started playing it just a couple months ago,
+				so I am not extremely good, but I have been getting better. <a target="_blank" href='http://dotabuff.com/players/154759335'>My Dotabuff</a></p><br>
+				
+				<h2>How can I donate to you?</h2>
+				<p>If you would like to donate you can donate Bitcoin using the widget above</p><br>
+				
+				<h2>Any way I can contact you?<h2>
+				<p>You can email me at
+				<script type="text/javascript" language="javascript">
+				<!--
+				// Email obfuscator script 2.1 by Tim Williams, University of Arizona
+				// Random encryption key feature by Andrew Moulden, Site Engineering Ltd
+				// This code is freeware provided these four comment lines remain intact
+				// A wizard to generate this code is at http://www.jottings.com/obfuscator/
+					{ coded = "VB1YTHjm6.P6g@s1Vjp.mi1"
+					key = "5sdFJ1paQHDIxZyL2vi3bc0OTPheYuVzWf4rC8Rqgjw7mlnMtE6XkSN9AoBUGK"
+					shift=coded.length
+					link=""
+					for (i=0; i<coded.length; i++) {
+						if (key.indexOf(coded.charAt(i))==-1) {
+						ltr = coded.charAt(i)
+						link += (ltr)
+					}
+					else {     
+						ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+						link += (key.charAt(ltr))
+					}
+					}
+						document.write("<a href='mailto:"+link+"'>"+link+"</a>")
+					}
+				//-->
+					</script><noscript>[Sorry, you need Javascript to see my email.]</noscript>. Need something more secure? My BitMessage is BM-NBaUPpm8B5YKeQQR41oEMfvRWbVY1MNw (Stream 1)</p><br>
+	
+			</div>
+		</div>
+    </body>
+	<script>
+		$(document).ready(function(){
+			$("#time").empty();
+			$("#time").append(Date().substring(0, 24));
+		});
+		setInterval(function(){
+			$("#time").empty();
+			$("#time").append(Date().substring(0, 24));
+		}, 1000);
+		/*$(document).ready(function(){
+			var width = $(window).width();
+			if(width <= 500){
+				$("#pageBody").append("
+			}
+		});*/
+	</script>
+</html>
